@@ -41,11 +41,11 @@ public class BaseTest {
 		// properties class
 
 		 Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")
-				+ "//src//main//java//rahulshettyacademy//resources//GlobalData.properties");
-		prop.load(fis);
+		//FileInputStream fis = new FileInputStream(System.getProperty("user.dir")
+				//+ "//src//main//java//rahulshettyacademy//resources//GlobalData.properties");
+		//prop.load(fis);
 		
-		String browserName = System.getProperty("browser")!=null ? System.getProperty("browser") :prop.getProperty("browser");
+		String browserName = "chrome"; //System.getProperty("browser")!=null ? System.getProperty("browser") :prop.getProperty("browser");
 		//prop.getProperty("browser");
 
 		if (browserName.contains("chrome")) {
