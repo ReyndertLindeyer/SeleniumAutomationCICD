@@ -64,12 +64,11 @@ public class BaseTest {
 			//WebDriverManager.firefoxdriver().setup();
 			//driver = new FirefoxDriver();
 			FirefoxOptions options = new FirefoxOptions();
-			if(browserName.contains("headless")) {
-				options.addArguments("--headless", "--disable-gpu", "--window-size=1440,900");
-				options.addArguments("start-maximized");
-			}
-			driver = new FirefoxDriver().setAcceptInsecureCerts(true)
-    									.setHeadless(true);
+			
+			options.addArguments("--headless", "--disable-gpu", "--window-size=1440,900");
+			options.addArguments("start-maximized");
+			
+			driver = new FirefoxDriver(options);
 			// Firefox
 		} else if (browserName.equalsIgnoreCase("edge")) {
 			// Edge
