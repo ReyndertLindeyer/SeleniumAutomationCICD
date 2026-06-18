@@ -68,7 +68,8 @@ public class BaseTest {
 				options.addArguments("--headless", "--disable-gpu", "--window-size=1440,900");
 				options.addArguments("start-maximized");
 			}
-			driver = new FirefoxDriver(options);
+			driver = new FirefoxDriver().setAcceptInsecureCerts(true)
+    									.setHeadless(true);
 			// Firefox
 		} else if (browserName.equalsIgnoreCase("edge")) {
 			// Edge
