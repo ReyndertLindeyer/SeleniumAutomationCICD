@@ -59,9 +59,14 @@ public class BaseTest {
 			driver.manage().window().setSize(new Dimension(1440,900));//full screen
 
 		} else if (browserName.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver",
-					"/Users/rahulshetty//documents//geckodriver");
-			driver = new FirefoxDriver();
+			//WebDriverManager.firefoxdriver().setup();
+			//driver = new FirefoxDriver();
+			FirefoxOptions options = new FirefoxOptions();
+			if(browserName.contains("headless")) {
+				options.addArguments("--headless", "--disable-gpu", "--window-size=1440,900");
+				options.addArguments("start-maximized");
+			}
+			driver = new FirefoxDriver(options);
 			// Firefox
 		} else if (browserName.equalsIgnoreCase("edge")) {
 			// Edge
