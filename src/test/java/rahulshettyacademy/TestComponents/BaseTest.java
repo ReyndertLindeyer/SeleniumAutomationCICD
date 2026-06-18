@@ -45,7 +45,7 @@ public class BaseTest {
 				//+ "//src//main//java//rahulshettyacademy//resources//GlobalData.properties");
 		//prop.load(fis);
 		
-		String browserName = "chrome"; //System.getProperty("browser")!=null ? System.getProperty("browser") :prop.getProperty("browser");
+		String browserName = "firefox"; //System.getProperty("browser")!=null ? System.getProperty("browser") :prop.getProperty("browser");
 		//prop.getProperty("browser");
 
 		if (browserName.contains("chrome")) {
